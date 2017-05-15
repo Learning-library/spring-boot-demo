@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="spring-boot-cache-ehcache:war">
+    <output-path>$PROJECT_DIR$/spring-boot-cache-ehcache/target</output-path>
+    <root id="archive" name="spring-boot-cache-ehcache.war">
+      <element id="artifact" artifact-name="spring-boot-cache-ehcache:war exploded" />
+    </root>
+  </artifact>
+</component>
