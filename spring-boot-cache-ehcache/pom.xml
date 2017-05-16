@@ -17,6 +17,7 @@
     <url>http://maven.apache.org</url>
     <modules>
         <module>../spring-boot-cache-redis</module>
+        <module>../spring-boot-activemq-producer</module>
     </modules>
 
     <dependencies>
