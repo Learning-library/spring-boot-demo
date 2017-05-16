@@ -12,9 +12,12 @@
 
     <artifactId>spring-boot-shiro-redis</artifactId>
 
-    <packaging>war</packaging>
+    <packaging>pom</packaging>
     <name>spring-boot-shiro-redis</name>
     <url>http://maven.apache.org</url>
+    <modules>
+        <module>../spring-boot-quartz</module>
+    </modules>
 
     <properties>
         <shiro.version>1.2.5</shiro.version>

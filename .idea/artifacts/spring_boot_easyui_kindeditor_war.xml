@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="spring-boot-easyui-kindeditor:war">
+    <output-path>$PROJECT_DIR$/spring-boot-easyui-kindeditor/target</output-path>
+    <root id="archive" name="spring-boot-easyui-kindeditor.war">
+      <element id="artifact" artifact-name="spring-boot-easyui-kindeditor:war exploded" />
+    </root>
+  </artifact>
+</component>
