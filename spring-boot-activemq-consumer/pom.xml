@@ -16,6 +16,7 @@
     <url>http://maven.apache.org</url>
     <modules>
         <module>../spring-boot-email</module>
+        <module>../spring-boot-easyui-kindeditor</module>
     </modules>
 
     <dependencies>
