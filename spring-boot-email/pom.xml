@@ -3,33 +3,22 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>spring-boot-activemq-producer</artifactId>
+        <artifactId>spring-boot-activemq-consumer</artifactId>
         <groupId>io.spring.boot.demo</groupId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../spring-boot-activemq-producer/pom.xml</relativePath>
+        <relativePath>../spring-boot-activemq-consumer/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-boot-activemq-consumer</artifactId>
-    <packaging>pom</packaging>
-    <name>spring-boot-activemq-consumer</name>
+    <artifactId>spring-boot-email</artifactId>
+    <packaging>war</packaging>
+    <name>spring-boot-email</name>
     <url>http://maven.apache.org</url>
-    <modules>
-        <module>../spring-boot-email</module>
-    </modules>
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-jms</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.activemq</groupId>
-            <artifactId>activemq-client</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.activemq</groupId>
-            <artifactId>activemq-spring</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
         </dependency>
         <dependency>
             <groupId>com.google.guava</groupId>
@@ -50,7 +39,7 @@
     </dependencies>
 
     <build>
-        <finalName>spring-boot-activemq-consumer</finalName>
+        <finalName>spring-boot-email</finalName>
     </build>
 
 </project>
