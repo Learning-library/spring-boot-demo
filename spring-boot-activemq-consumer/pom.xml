@@ -3,20 +3,17 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>spring-boot-cache-ehcache</artifactId>
+        <artifactId>spring-boot-activemq-producer</artifactId>
         <groupId>io.spring.boot.demo</groupId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../spring-boot-cache-ehcache/pom.xml</relativePath>
+        <relativePath>../spring-boot-activemq-producer/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-boot-activemq-producer</artifactId>
-    <packaging>pom</packaging>
-    <name>spring-boot-activemq-producer</name>
+    <artifactId>spring-boot-activemq-consumer</artifactId>
+    <packaging>war</packaging>
+    <name>spring-boot-activemq-consumer</name>
     <url>http://maven.apache.org</url>
-    <modules>
-        <module>../spring-boot-activemq-consumer</module>
-    </modules>
 
     <dependencies>
         <dependency>
@@ -50,21 +47,7 @@
     </dependencies>
 
     <build>
-        <finalName>spring-boot-activemq-producer</finalName>
+        <finalName>spring-boot-activemq-consumer</finalName>
     </build>
-
-    <repositories>
-        <repository>
-            <id>spring-libs-snapshot</id>
-            <url>https://repo.spring.io/libs-snapshot</url>
-        </repository>
-    </repositories>
-
-    <pluginRepositories>
-        <pluginRepository>
-            <id>spring-plugins-release</id>
-            <url>https://repo.spring.io/plugins-release</url>
-        </pluginRepository>
-    </pluginRepositories>
 
 </project>
