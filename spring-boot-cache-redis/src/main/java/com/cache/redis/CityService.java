@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 public class CityService {
     Logger logger = LogManager.getLogger(getClass());
 
-    @Cacheable
+    @Cacheable(keyGenerator = "wiselyKeyGenerator")
     public CityInfo getCity(int id, String city) {
         logger.info("id: {}, city: {}", id, city);
         return new CityInfo(id, city);
