@@ -1,4 +1,4 @@
-package com.lance.email;
+package com.email;
 
 import org.springframework.context.annotation.Configuration;
 
