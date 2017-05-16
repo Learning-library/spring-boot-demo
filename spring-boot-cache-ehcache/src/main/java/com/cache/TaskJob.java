@@ -28,6 +28,8 @@ public class TaskJob {
     public void retrieveCountry() {
         int index = new Random().nextInt(list.size());
         String city = find(index);
+
+        //两条log  有缓存记录的时候 输出一条 没有缓存记录的时候输出2条
         CityInfo info = cityService.getCity(index, city);
 
         logger.info("city: {}", JSON.toJSONString(info));
