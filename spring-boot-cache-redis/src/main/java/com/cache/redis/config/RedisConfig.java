@@ -25,6 +25,11 @@ import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 @EnableCaching
 public class RedisConfig extends CachingConfigurerSupport {
 
+    /**
+     * 设置统一的生成key的方式
+     *
+     * @return
+     */
     @Bean
     public KeyGenerator wiselyKeyGenerator() {
         return new KeyGenerator() {
@@ -43,12 +48,26 @@ public class RedisConfig extends CachingConfigurerSupport {
 
     }
 
+    /**
+     * 设置统一失效时间
+     *
+     * @param redisTemplate
+     * @return
+     */
     @Bean
     public CacheManager cacheManager(
             @SuppressWarnings("rawtypes") RedisTemplate redisTemplate) {
-        return new RedisCacheManager(redisTemplate);
+        RedisCacheManager redisCacheManager = new RedisCacheManager(redisTemplate);//设置统一实效时间
+        redisCacheManager.setDefaultExpiration(604800);
+        redisCacheManager.setTransactionAware(true);
+        return redisCacheManager;
     }
 
+    /**
+     * 设置统一序列化
+     * @param factory
+     * @return
+     */
     @Bean
     public RedisTemplate<String, String> redisTemplate(
             RedisConnectionFactory factory) {
